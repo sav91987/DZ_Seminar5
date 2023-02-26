@@ -34,11 +34,9 @@ int[] GetResultArray(int size, int newSize, int[] array)
     for (int i = 0; i < newSize; i++)
     {
         resultArray[i] = array[i] * array[size - 1];
-        Console.WriteLine(resultArray[i]);
         size--;
     }
-    Console.WriteLine(newSize % 2);
-    if ((sizeSaved % 2) != 0)
+       if ((sizeSaved % 2) != 0)
     {
         resultArray[newSize - 1] = array[newSize - 1];
     }
@@ -46,6 +44,6 @@ int[] GetResultArray(int size, int newSize, int[] array)
 }
 int[] newArray = GetResultArray(length, newLength, array);
 
-System.Console.WriteLine($"[{String.Join("; ", array)}]");
-System.Console.WriteLine($"[{String.Join("; ", newArray)}]");
+System.Console.WriteLine($"Исходный массив: [{String.Join("; ", array)}]");
+System.Console.WriteLine($"Новый массив: [{String.Join("; ", newArray)}]");
 
